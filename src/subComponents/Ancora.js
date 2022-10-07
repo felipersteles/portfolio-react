@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Anchor, Link } from "../components/AllSvgs";
+import { mediaQueries } from "../components/Themes";
 
 const Ancora = (props) => {
   const ref = useRef(null);
@@ -56,6 +57,10 @@ const Ancora = (props) => {
 
 const Container = styled.div`
   position: relative;
+
+  ${mediaQueries(40)`
+    display:none;
+  `};
 `;
 
 const Slider = styled.div`
@@ -67,6 +72,7 @@ const Slider = styled.div`
   align-items: center;
   flex-direction: column;
   transform: translateY(-100%);
+  
   .chain {
     transform: rotate(135deg);
   }

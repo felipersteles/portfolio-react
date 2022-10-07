@@ -5,8 +5,8 @@ const Loading = () => {
   return (
     <Box>
       <Besteira>
-        <div class="loadingio-spinner-bean-eater-zy28yly0wqn">
-          <div class="ldio-wg7wqloygyn">
+        <div className="loadingio-spinner-bean-eater-zy28yly0wqn">
+          <div className="ldio-wg7wqloygyn">
             <div>
               <div></div>
               <div></div>

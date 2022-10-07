@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { PowerBtn } from "../components/AllSvgs";
+import { mediaQueries } from "../components/Themes";
 
 const PowerButton = () => {
   return (
@@ -29,14 +30,26 @@ const Power = styled.button`
   align-items: center;
   z-index: 3;
   cursor: pointer;
+
   &:hover {
     background-color: rgba(34, 0, 80, 0.8);
     box-shadow: 0 0 8px 6px rgba(34, 0, 80, 0.2);
   }
+
   & > *:first-child {
     text-decoration: none;
     color: inherit;
   }
+
+  ${mediaQueries(40)`
+    width: 2rem;
+    height: 2rem;
+    
+    svg{
+      width:20px;
+      height:20px;
+    }
+  `};
 `;
 
 export default PowerButton;

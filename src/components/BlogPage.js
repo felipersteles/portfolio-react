@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import styled from "styled-components";
 import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
-import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
-
 import { Blogs } from "../data/BlogData";
-import BlogComponent from "./BlogComponent";
-import Ancora from "../subComponents/Ancora";
 import { motion } from "framer-motion";
-import BigTitle from "../subComponents/BigTitle";
+
+import BlogComponent from "./BlogComponent";
+import Loading from "../subComponents/Loading";
+import { mediaQueries } from "./Themes";
+
+const LogoComponent = lazy(() => import("../subComponents/LogoComponent"));
+const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
+const PowerButton = lazy(() => import("../subComponents/PowerButton"));
+const Ancora = lazy(() => import("../subComponents/Ancora"));
+const BigTitle = lazy(() => import("../subComponents/BigTitle"));
 
 const BlogPage = () => {
   const [numbers, setNumbers] = useState(0);
@@ -20,32 +23,34 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <MainContainer
-      variants={container}
-      initial="hidden"
-      animate="show"
-      exit={{
-        opacity: 0,
-        transition: { duration: 0.5 },
-      }}
-    >
-      <Container>
-        <LogoComponent />
-        <PowerButton />
-        <SocialIcons />
-        <Ancora number={numbers} />
+    <Suspense fallback={<Loading />}>
+      <MainContainer
+        variants={container}
+        initial="hidden"
+        animate="show"
+        exit={{
+          opacity: 0,
+          transition: { duration: 0.5 },
+        }}
+      >
+        <Container>
+          <LogoComponent />
+          <PowerButton />
+          <SocialIcons />
+          <Ancora number={numbers} />
 
-        <Center>
-          <Grid>
-            {Blogs.map((blog) => {
-              return <BlogComponent key={blog.id} blog={blog} />;
-            })}
-          </Grid>
-        </Center>
+          <Center>
+            <Grid>
+              {Blogs.map((blog) => (
+                <BlogComponent key={blog.id} blog={blog} />
+              ))}
+            </Grid>
+          </Center>
 
-        <BigTitle text="CERTIFICADOS" top="5rem" left="5rem" />
-      </Container>
-    </MainContainer>
+          <BigTitle text="CERTIFICADOS" top="5rem" left="5rem" />
+        </Container>
+      </MainContainer>
+    </Suspense>
   );
 };
 
@@ -70,12 +75,20 @@ const Center = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 10rem;
+
+  ${mediaQueries(30)`
+    padding-top: 7rem;
+  `};
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
   grid-gap: calc(1rem + 2vw);
+
+  ${mediaQueries(50)`
+    grid-template-columns: 100%;
+  `};
 `;
 
 // Cpnfiguração do framer motion

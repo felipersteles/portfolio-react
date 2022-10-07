@@ -3,9 +3,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Linkedin, Github } from "../components/AllSvgs";
-import { temaEscuro } from "../components/Themes";
+import { temaEscuro, mediaQueries } from "../components/Themes";
 
 const SocialIcons = (props) => {
+  const mq = window.matchMedia("(max-width: 40em)").matches;
+
   return (
     <Icons>
       <motion.div
@@ -50,7 +52,7 @@ const SocialIcons = (props) => {
           height: 0,
         }}
         animate={{
-          height: "8rem",
+          height: mq ? "5rem" : "8rem",
         }}
         transition={{
           type: "spring",
@@ -73,12 +75,20 @@ const Icons = styled.div`
 
   & > *:not(:last-child) {
     margin: 0.5rem 0;
+
+    ${mediaQueries(20)`
+      margin: 0.3rem 0;
+  `};
   }
 
-  @media only screen and (max-width: 600px) {
-    bottom: 0;
-    left: 1rem;
-  }
+  ${mediaQueries(40)`
+  left: 1rem;
+
+      svg{
+        width:20px;
+        height:20px
+      }
+  `};
 `;
 
 const Line = styled(motion.span)`

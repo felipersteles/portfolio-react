@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { temaEscuro } from "../components/Themes";
+import { temaEscuro, mediaQueries } from "../components/Themes";
 import logo from '../assets/logo.png'
 
 const LogoComponent = (props) => {
@@ -22,6 +22,12 @@ const Logo = styled.h1`
     width: 4rem;
     height: 4rem;
   }
+
+  ${mediaQueries(40)`
+      font-size:1.5em;
+      left:1rem;
+      top:2rem;
+  `};
 `;
 
 export default LogoComponent;
