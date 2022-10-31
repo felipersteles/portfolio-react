@@ -1,6 +1,16 @@
 export const Work = [
   {
     id: 1,
+    name: "SaTELEStes",
+    description:
+      "Um site consumindo a API pública da nasa feito para os amantes das estrelas.",
+    tags: ["react", "css", "styledComponents"],
+
+    demo: "https://satelestes.vercel.app/",
+    github: "https://github.com/felipersteles/saTELEStes",
+  },
+  {
+    id: 2,
     name: "Spotify Cover",
     description:
       "Uma réplica do spotify desenvolida com Reactjs e Axios utilizando a API do Spotify.",
@@ -10,7 +20,7 @@ export const Work = [
     github: "https://github.com/felipersteles/spotify-react",
   },
   {
-    id: 2,
+    id: 3,
     name: "Instagram Fake",
     description:
       "Uma cópia do instagram desenvolida com Angular em TS utilizando a API disponibilizada pelo curso da Devaria",
@@ -20,7 +30,7 @@ export const Work = [
     github: "https://github.com/felipersteles/devgram-angular",
   },
   {
-    id: 3,
+    id: 4,
     name: "Academia do vizinho",
     description:
       "Site de academia que desenvolvi para estudar o uso de Css e React",
@@ -30,7 +40,7 @@ export const Work = [
     github: "https://github.com/felipersteles/academia-react",
   },
   {
-    id: 4,
+    id: 5,
     name: "Portfolio em Django",
     description:
       "Site que desenvolvi como portfolio quando estava aprendendo Django",
@@ -40,7 +50,7 @@ export const Work = [
     github: "https://github.com/felipersteles/PortfolioDjangoFelipeTeles",
   },
   {
-    id: 5,
+    id: 6,
     name: "Controle de gastos",
     description:
       "Site que desenvolvi quando estava aprendendo conceitos de react armazenando os dados no LocalStorage",
@@ -50,7 +60,7 @@ export const Work = [
     github: "https://github.com/felipersteles/controle-financeiro-react",
   },
   {
-    id: 6,
+    id: 7,
     name: "Jogo da cobrinha",
     description:
       "Site que desenvolvi quando estava aprendendo os conceitos de Javascript",
@@ -60,7 +70,7 @@ export const Work = [
     github: "https://github.com/felipersteles/jogo-da-cobrinha",
   },
   {
-    id: 7,
+    id: 8,
     name: "Jogo da velha",
     description:
       "Site que desenvolvi quando estava aprendendo os conceitos de Javascript",
@@ -70,7 +80,7 @@ export const Work = [
     github: "https://github.com/felipersteles/TicTacToe",
   },
   {
-    id: 8,
+    id: 9,
     name: "Gatinho",
     description:
       "SÓ BESTEIRA",
