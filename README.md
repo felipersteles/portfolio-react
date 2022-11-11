@@ -5,7 +5,7 @@ Site para auxiliar na apresentação do meu trabalho. Contendo de forma bem resu
 ## Ver site👇: <br />
 https://felipersteles.herokuapp.com/
 
-## Images of The Portfolio Website:
+## Imagens do site:
 ![HOME](img/home.jpg)
 ![PROJETOS](img/projetos.jpg)
 ![CERTIFICADOS](img/certificados.jpg)
@@ -14,6 +14,8 @@ https://felipersteles.herokuapp.com/
 
 ## Ferramentas utilizadas no projeto
 
+Linguagem utilizada foi o Javascript: https://www.javascript.com/ <br />
+Biblioteca utilizada foi o React: https://reactjs.org/ <br />
 Design feito no: https://www.figma.com/ <br />
 Svg Icons de: https://fontawesome.com/  <br />
 Audio: Música de Erik Satie, Gnossienne <br />
