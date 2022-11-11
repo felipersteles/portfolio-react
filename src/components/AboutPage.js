@@ -37,9 +37,7 @@ const AboutPage = () => {
             atualmente são JavaScript e Java, porém tenho conhecimento e
             projetos em várias linguagens.
             <br /> <br />
-            Tenho interesse na área de desenvolvedor Frontend, pois sou
-            apaixonado por arte e adoro proporcionar pras pessoas um teor de
-            excelência ao usufruir de meus produtos e insumos.
+            Atualmente estou sem emprego na área da programação, mas já fui programador de uma startup que utilizava .NET no backend e Angular no front. Além do uso de metodologias agéis como Scrum e Planning Poker e, também tenho um artigo escrito na área acadêmica com o tema Deep Learning aplicado a doenças no tratao gastrointestinal cujo assunto é um tracker desenvolvido em Python utilizando framwork TensowFlow.
             <br /> <br />
             Falo dois idiomas, já morei nos Estados Unidos e atualmente estou
             aprendendo russo.
