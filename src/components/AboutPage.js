@@ -33,13 +33,11 @@ const AboutPage = () => {
           </Alien>
           <Main>
             Sou estudante de ciência da computação na Universidade Federal do
-            Maranhão e as linguagens de programação que eu mais utilizo
-            atualmente são JavaScript e Java, porém tenho conhecimento e
-            projetos em várias linguagens.
+            Maranhão e estágiario desenvolvedor na Tarken.
             <br /> <br />
-            Atualmente estou sem emprego na área da programação, mas já fui programador de uma startup que utilizava .NET no backend e Angular no front. Além do uso de metodologias agéis como Scrum e Planning Poker e, também tenho um artigo escrito na área acadêmica com o tema Deep Learning aplicado a doenças no tratao gastrointestinal cujo assunto é um tracker desenvolvido em Python utilizando framwork TensowFlow.
+            Atualmente trabalho principalmente com a linguagem de programação Typescript e utilizo as frameworks Nestjs e React. Na área acadêmica tenho um artigo escrito com o tema Deep Learning aplicado a doenças no tratao gastrointestinal cujo assunto é um tracker desenvolvido em Python utilizando framwork TensowFlow, artigo este que apresentei no SEMIC 2022.
             <br /> <br />
-            Falo dois idiomas, já morei nos Estados Unidos e atualmente estou
+            Falo dois idiomas, sendo eles inglês e português. Já morei nos Estados Unidos e atualmente estou
             aprendendo russo.
           </Main>
 
