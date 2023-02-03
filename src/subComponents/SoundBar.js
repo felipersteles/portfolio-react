@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-import music from "../assets/audio/ErikSatie-Gnossienne.mp3";
+import music from "../assets/audio/czardas.mp3";
 
 const SoundBar = () => {
   const ref = useRef(null);
