@@ -27,8 +27,12 @@ Audio: playlist.js <br />
 
 # Caso queira os scripts 
 
-<h1>siga o poema</h1>
+siga o poema
+
 `npm i`
+
 , rodar código
+
 `npm start`
+
 e _curtir_ rs
