@@ -1,16 +1,31 @@
-import { motion } from "framer-motion";
-import React from "react";
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { Github } from "../components/AllSvgs";
-import { mediaQueries } from "../components/Themes";
 
-const Card = (props) => {
-  const { id, name, description, tags, demo, github } = props.data;
+import { motion } from "framer-motion";
+import styled from "styled-components";
+
+import DisponivelIcon from '../../../assets/icons/DisponivelIcon'
+import IndisponivelIcon from '../../../assets/icons/IndisponivelIcon'
+
+import { Github } from "../../AllSvgs";
+import { mediaQueries } from "../../Themes";
+import IconTooltip from '../../../subComponents/IconTooltip'
+
+const icons = {
+  DisponivelIcon
+}
+
+
+// const handleIcons = () => {
+//   return icon
+// }
+
+const DeployCard = (props) => {
+  const { id, name, description, tags, demo, github, available } = props.data;
 
   return (
     <Box key={id} variants={Item}>
-      <Title>{name}</Title>
+      <Header><Title>{name}</Title>{available ? <DisponivelIcon size={30}/>: <IndisponivelIcon size={30}/>}</Header>
+  
       <Description>{description}</Description>
       <Tags>
         {tags.map((t, id) => {
@@ -75,8 +90,15 @@ padding:1.5rem 1.5rem;
         height:40vh;
   `};
 `;
+
 const Title = styled.h2`
   font-size: calc(1em + 0.5vw);
+`;
+
+const Header = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 `;
 
 const Description = styled.h2`
@@ -156,4 +178,4 @@ const Item = {
   },
 };
 
-export default Card;
+export default DeployCard;

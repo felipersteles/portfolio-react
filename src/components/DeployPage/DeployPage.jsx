@@ -1,22 +1,23 @@
 import React, { useEffect, useRef, lazy, Suspense } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { temaEscuro, mediaQueries } from "./Themes";
+import { temaEscuro, mediaQueries } from "../Themes";
 import { motion } from "framer-motion";
 
-import { Work } from "../data/WorkData";
-import Card from "../subComponents/Card";
-import { YinYang } from "./AllSvgs";
-import Loading from "../subComponents/Loading";
+import { workHistory } from "../../data/WorkData";
+import DeployCard from "./components/DeployCard";
+import { YinYang } from "../AllSvgs";
+import Loading from "../../subComponents/Loading";
 
-const LogoComponent = lazy(() => import("../subComponents/LogoComponent"));
-const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
-const PowerButton = lazy(() => import("../subComponents/PowerButton"));
-const BigTitle = lazy(() => import("../subComponents/BigTitle"));
+const LogoComponent = lazy(() => import("../../subComponents/LogoComponent"));
+const SocialIcons = lazy(() => import("../../subComponents/SocialIcons"));
+const PowerButton = lazy(() => import("../../subComponents/PowerButton"));
+const BigTitle = lazy(() => import("../../subComponents/BigTitle"));
 
-const WorkPage = () => {
+const DeployPage = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
 
+  // que coisa linda, espero que esteja lendo isso com a música tocando rs
   useEffect(() => {
     let element = ref.current;
 
@@ -47,8 +48,8 @@ const WorkPage = () => {
           <PowerButton />
 
           <Main ref={ref} variants={container} initial="hidden" animate="show">
-            {Work.map((d) => (
-              <Card key={d.id} data={d} />
+            {workHistory.map((work) => (
+              <DeployCard key={work.id} data={work} />
             ))}
           </Main>
           <Rotate ref={yinyang}>
@@ -138,4 +139,4 @@ const container = {
   },
 };
 
-export default WorkPage;
+export default DeployPage;

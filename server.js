@@ -9,7 +9,9 @@ app.get("*", (req, res) => {
   res.sendFile(__dirname + "/build/index.html");
 });
 
+// se tu chegou aqui realmente se interessou pelo código rs
+
 app.listen(PORT, (err) => {
-  if (err) return connsole.log("Erro: " + err);
+  if (err) return console.log("Erro: " + err);
   console.log("Servidor iniciado na porta " + PORT);
 });

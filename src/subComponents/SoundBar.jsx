@@ -1,10 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, {useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 
-import music from "../assets/audio/czardas.mp3";
+import track1 from "../assets/audio/czardas.mp3";
+import track2 from "../assets/audio/demasiadoBonita.mp3";
 
-const SoundBar = () => {
+const SoundBar = ({surpresa = true}) => {
   const ref = useRef(null);
+
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
@@ -25,7 +27,7 @@ const SoundBar = () => {
       <Line click={click} />
       <Line click={click} />
 
-      <audio src={music} ref={ref} loop />
+      <audio src={surpresa ? track1 : track2} ref={ref} autoPlay={false} />
     </Box>
   );
 };

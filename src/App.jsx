@@ -10,11 +10,11 @@ import Loading from "./subComponents/Loading";
 const Main = lazy(() => import("./components/Main"));
 const AboutPage = lazy(() => import("./components/AboutPage"));
 const BlogPage = lazy(() => import("./components/BlogPage"));
-const WorkPage = lazy(() => import("./components/WorkPage"));
+const DeployPage = lazy(() => import("./components/DeployPage/DeployPage"));
 const MySkillsPage = lazy(() => import("./components/MySkillsPage"));
 const SoundBar = lazy(() => import("./subComponents/SoundBar"));
 
-function App() {
+const App = () => {
   const location = useLocation();
 
   return (
@@ -30,7 +30,7 @@ function App() {
               <Route exact path="/" component={Main} />
               <Route exact path="/sobre" component={AboutPage} />
               <Route exact path="/certificados" component={BlogPage} />
-              <Route exact path="/trabalhos" component={WorkPage} />
+              <Route exact path="/trabalhos" component={DeployPage} />
               <Route exact path="/habilidades" component={MySkillsPage} />
             </Switch>
           </AnimatePresence>

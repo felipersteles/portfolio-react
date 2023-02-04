@@ -1,4 +1,4 @@
-export const Work = [
+export const workHistory = [
   {
     id: 1,
     name: "SaTELEStes",
@@ -8,6 +8,7 @@ export const Work = [
 
     demo: "https://satelestes.vercel.app/",
     github: "https://github.com/felipersteles/saTELEStes",
+    available: true
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const Work = [
 
     demo: "https://spotify-felipsteles.herokuapp.com/",
     github: "https://github.com/felipersteles/spotify-react",
+    available: false
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ export const Work = [
 
     demo: "https://devagram-felipeteles.herokuapp.com/",
     github: "https://github.com/felipersteles/devgram-angular",
+    available: false
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const Work = [
 
     demo: "https://academia-do-vizinho.herokuapp.com/",
     github: "https://github.com/felipersteles/academia-react",
+    available: false
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ export const Work = [
 
     demo: "https://felipsteles.herokuapp.com/",
     github: "https://github.com/felipersteles/PortfolioDjangoFelipeTeles",
+    available: false
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const Work = [
 
     demo: "https://felipersteles.github.io/controle-financeiro-react/",
     github: "https://github.com/felipersteles/controle-financeiro-react",
+    available: true
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ export const Work = [
 
     demo: "https://felipersteles.github.io/jogo-da-cobrinha/",
     github: "https://github.com/felipersteles/jogo-da-cobrinha",
+    available: true
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ export const Work = [
 
     demo: "https://felipersteles.github.io/TicTacToe/",
     github: "https://github.com/felipersteles/TicTacToe",
+    available: true
   },
   {
     id: 9,
@@ -88,5 +96,17 @@ export const Work = [
 
     demo: "https://felipersteles.github.io/gatinho/",
     github: "https://github.com/felipersteles/gatinho",
+    available: true
+  },
+  {
+    id: 10,
+    name: "Esse site",
+    description:
+      "SÓ BESTEIRA real",
+    tags: ["styled-components", "react", "motion"],
+
+    demo: "https://felipeteles.netlify.app/",
+    github: "https://github.com/felipersteles/portfolio-react",
+    available: true
   },
 ];
