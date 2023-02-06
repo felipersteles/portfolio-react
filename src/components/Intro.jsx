@@ -19,19 +19,24 @@ const Intro = () => {
   return (
     <Box
       initial={{ height: 0 }}
-      animate={{ height: height}}
+      animate={{ height: height }}
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
       <SubBox>
         <Text>
-          <h1>Prazer,</h1>
-          <h3>
+          <h2>Prazer, </h2>
+          <h1>
             <i>Felipe Teles.</i>
-          </h3>
-          <h6>
-            Sou desenvolvedor frontend e apaixonado por arte. Fiz esse site em
-            React
-          </h6>
+          </h1>
+          {/* <p>
+            Eu queria escrever "Parabéns por chegar até aqui."
+            Então caso tenha chegado até aqui: PARABÉNS DE VERDADE rs.
+
+            Vale a pena me mandar mensagem to afim de desafios
+          </p> */}
+          <p>
+            Bem vindo, sou desenvolvedor fullStack a apaixonado por arte e computadores.
+          </p>
         </Text>
       </SubBox>
       <SubBox>
@@ -132,6 +137,12 @@ const SubBox = styled.div`
   width: 50%;
   position: relative;
   display: flex;
+
+  .subSubBox{
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   .pic {
     position: absolute;

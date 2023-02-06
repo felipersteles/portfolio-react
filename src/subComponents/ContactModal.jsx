@@ -19,22 +19,24 @@ const ContactModal = ({ open, setOpenModal }) => {
     setMensagem(value);
   };
 
-  const handleSendMessage = () => {
-    console.log("Mensagem: ", mensagem);
+  const handleSendMessage = () => {;
     setShowGif(true);
   };
 
   return (
     <Modal
       show={open}
-      onHide={() => setOpenModal(false)}
+      onHide={() => {
+        setOpenModal(false);
+        setShowGif(false);
+      }}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Deixe seu recado aqui:
+          {showGif ? "Obrigado pela mensagem!" : "Deixe seu recado aqui:"}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -65,15 +67,30 @@ const ContactModal = ({ open, setOpenModal }) => {
         )}
 
         <Palhaco ativo={showGif}>
-            <h3>Ainda não implementei um backend então sua mensagem não vai chegar :/. Mas se quiser falar comigo é só mandar mensagem no instagram @felipsteles</h3>
+          <h5>
+            Ainda não implementei um backend então sua mensagem não vai chegar
+            :/
+            <br /> Mas se quiser falar comigo é só mandar mensagem no instagram
+            @felipsteles ;)
+          </h5>
           <Lottie animationData={clown} />
         </Palhaco>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="outline-primary" onClick={handleSendMessage}>
+        <Button
+          variant="primary"
+          onClick={handleSendMessage}
+          disabled={showGif}
+        >
           Mandar mensagem
         </Button>
-        <Button variant="outline-secondary" onClick={() => setOpenModal(false)}>
+        <Button
+          variant="secondary"
+          onClick={() => {
+            setOpenModal(false);
+            setShowGif(false);
+          }}
+        >
           Fechar
         </Button>
       </Modal.Footer>

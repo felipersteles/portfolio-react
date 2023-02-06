@@ -4,14 +4,24 @@ import styled from "styled-components";
 import { PowerBtn } from "../components/AllSvgs";
 import { mediaQueries } from "../components/Themes";
 
-const PowerButton = () => {
-  return (
-    <Power>
-      <NavLink to="/">
-        <PowerBtn width={30} height={30} fill="currentColor" />
-      </NavLink>
-    </Power>
-  );
+const PowerButton = ({ onClick }) => {
+  if (onClick)
+    return (
+      <Power onClick={onClick}>
+        <NavLink to="/">
+          <PowerBtn width={30} height={30} fill="currentColor" />
+        </NavLink>
+      </Power>
+    );
+
+  if (!onClick)
+    return (
+      <Power>
+        <NavLink to="/">
+          <PowerBtn width={30} height={30} fill="currentColor" />
+        </NavLink>
+      </Power>
+    );
 };
 
 const Power = styled.button`

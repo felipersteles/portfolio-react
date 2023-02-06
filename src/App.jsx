@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import GlobalStyle from "./globalStyles";
 import { ThemeProvider } from "styled-components";
 import { temaClaro } from "./components/Themes";
@@ -16,6 +18,29 @@ const SoundBar = lazy(() => import("./subComponents/SoundBar"));
 
 const App = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    console.clear();
+
+    console.log(
+      "%cEsta área é para desenvolvedores",
+      "color: red; font-size: 30px;"
+    );
+
+    console.log(
+      "%cSaia imediatamente!",
+      `
+  background: black;
+  border: 3px solid green;
+  color: yellow;
+  font-size: 50px;
+  margin: 40px;
+  padding: 20px;
+`
+    );
+
+    console.info("Na verdade tudo aqui são experimentos que eu faço quando estou praticando javascript rs")
+  }, []);
 
   return (
     <>
@@ -38,6 +63,6 @@ const App = () => {
       </ThemeProvider>
     </>
   );
-}
+};
 
 export default App;

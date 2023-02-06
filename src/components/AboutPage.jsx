@@ -32,13 +32,24 @@ const AboutPage = () => {
             <img src={alien} alt="spaceman" />
           </Alien>
           <Main>
-            Sou estudante de ciência da computação na Universidade Federal do
-            Maranhão e estágiario desenvolvedor na Tarken.
-            <br /> <br />
-            Atualmente trabalho principalmente com a linguagem de programação Typescript e utilizo as frameworks Nestjs e React. Na área acadêmica tenho um artigo escrito com o tema Deep Learning aplicado a doenças no tratao gastrointestinal cujo assunto é um tracker desenvolvido em Python utilizando framwork TensowFlow, artigo este que apresentei no SEMIC 2022.
-            <br /> <br />
-            Falo dois idiomas, sendo eles inglês e português. Já morei nos Estados Unidos e atualmente estou
-            aprendendo russo.
+            <p>
+              Sou estudante de ciência da computação na Universidade Federal do
+              Maranhão e estágiario desenvolvedor na Tarken Ag.
+            </p>
+            
+            <p>
+              Atualmente trabalho principalmente com a linguagem de programação
+              Typescript e utilizo as frameworks Nestjs e React. Na área
+              acadêmica tenho um artigo escrito com o tema Deep Learning
+              aplicado a doenças no tratao gastrointestinal cujo assunto é um
+              tracker desenvolvido em Python utilizando framwork TensowFlow,
+              artigo este que apresentei no SEMIC 2022.
+            </p>
+
+            <p>
+              Falo dois idiomas, sendo eles inglês e português. Já morei nos
+              Estados Unidos e atualmente estou aprendendo russo.
+            </p>
           </Main>
 
           <BigTitle text="ABOUT" top="10%" left="5%" />
@@ -83,6 +94,7 @@ const Main = styled.div`
   z-index: 3;
   line-height: 1.5;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: calc(0.6rem + 1vw);

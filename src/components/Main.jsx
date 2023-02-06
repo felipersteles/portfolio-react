@@ -21,10 +21,7 @@ const Main = () => {
 
   const handleClick = () => setClick(!click);
 
-  const handleOpenModal = () => {
-    console.log("abrir modal")
-    setOpenModal(true)
-  }
+  const handleOpenModal = () => setOpenModal(true);
 
   const moveY = {
     y: "-100%",
@@ -36,7 +33,7 @@ const Main = () => {
 
   return (
     <Suspense fallback={<Loading />}>
-    <ContactModal open={openModal} setOpenModal={setOpenModal} />
+      <ContactModal open={openModal} setOpenModal={setOpenModal} />
 
       <MainContainer
         key="modal"
@@ -49,7 +46,7 @@ const Main = () => {
         <Container>
           <LogoComponent theme={click ? "dark" : "light"} />
 
-          <PowerButton />
+          <PowerButton onClick={handleClick} />
           {mq ? (
             <SocialIcons theme="light" />
           ) : (
