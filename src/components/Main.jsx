@@ -47,6 +47,7 @@ const Main = () => {
           <LogoComponent theme={click ? "dark" : "light"} />
 
           <PowerButton onClick={handleClick} />
+
           {mq ? (
             <SocialIcons theme="light" />
           ) : (
@@ -91,7 +92,7 @@ const Main = () => {
               </motion.h3>
             </Contact>
           ) : (
-            <Contact onClick={handleOpenModal}>
+            <Contact click={+click} onClick={handleOpenModal}>
               <motion.h3
                 initial={{
                   y: -200,

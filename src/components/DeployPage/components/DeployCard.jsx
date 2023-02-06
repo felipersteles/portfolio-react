@@ -8,16 +8,6 @@ import IndisponivelIcon from '../../../assets/icons/IndisponivelIcon'
 
 import { Github } from "../../AllSvgs";
 import { mediaQueries } from "../../Themes";
-import IconTooltip from '../../../subComponents/IconTooltip'
-
-const icons = {
-  DisponivelIcon
-}
-
-
-// const handleIcons = () => {
-//   return icon
-// }
 
 const DeployCard = (props) => {
   const { id, name, description, tags, demo, github, available } = props.data;
@@ -45,7 +35,7 @@ const DeployCard = (props) => {
 };
 
 const Box = styled(motion.li)`
-  width: 16rem;
+  width: 20rem;
   height: 40vh;
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
