@@ -12,11 +12,19 @@ import { mediaQueries } from "./Themes";
 const LogoComponent = lazy(() => import("../subComponents/LogoComponent"));
 const PowerButton = lazy(() => import("../subComponents/PowerButton"));
 const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
+const ContactModal = lazy(() => import("../subComponents/ContactModal"));
 
 const Main = () => {
   const [click, setClick] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [path, setpath] = useState("");
+
   const handleClick = () => setClick(!click);
+
+  const handleOpenModal = () => {
+    console.log("abrir modal")
+    setOpenModal(true)
+  }
 
   const moveY = {
     y: "-100%",
@@ -28,6 +36,8 @@ const Main = () => {
 
   return (
     <Suspense fallback={<Loading />}>
+    <ContactModal open={openModal} setOpenModal={setOpenModal} />
+
       <MainContainer
         key="modal"
         initial={{ opacity: 0 }}
@@ -67,11 +77,7 @@ const Main = () => {
           </Center>
 
           {mq ? (
-            <Contact
-              click={+click}
-              target="_blank"
-              to={{ pathname: "mailto:felipersteles@gmail.com" }}
-            >
+            <Contact onClick={handleOpenModal}>
               <motion.h3
                 initial={{
                   y: -200,
@@ -88,11 +94,7 @@ const Main = () => {
               </motion.h3>
             </Contact>
           ) : (
-            <Contact
-              click={+false}
-              target="_blank"
-              to={{ pathname: "mailto:felipersteles@gmail.com" }}
-            >
+            <Contact onClick={handleOpenModal}>
               <motion.h3
                 initial={{
                   y: -200,
@@ -175,7 +177,8 @@ const Main = () => {
             <ABOUT
               onClick={() => setClick(false)}
               click={mq ? +false : +click}
-              to="/sobre">
+              to="/sobre"
+            >
               <motion.h2
                 initial={{
                   y: 200,
@@ -191,7 +194,7 @@ const Main = () => {
                 Sobre mim.
               </motion.h2>
             </ABOUT>
-            
+
             <SKILLS to="/habilidades">
               <motion.h2
                 initial={{
@@ -246,13 +249,14 @@ to{
 }
 `;
 
-const Contact = styled(NavLink)`
+const Contact = styled.div`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
+  cursor: pointer;
 `;
 
 const Blog = styled(NavLink)`
