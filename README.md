@@ -26,11 +26,13 @@ Audio: playlist.js <br />
 
 
 # Caso queira os scripts 
-## siga o poema
 
-## `npm i`;
+siga o poema
 
-## , rodar código
-## `npm start`;
+`npm i`
 
-## e _curtir_ rs;
+, rodar código
+
+`npm start`
+
+e _curtir_ rs
