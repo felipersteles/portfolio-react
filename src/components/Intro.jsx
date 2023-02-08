@@ -35,7 +35,7 @@ const Intro = () => {
             Vale a pena me mandar mensagem to afim de desafios
           </p> */}
           <p>
-            Bem vindo, sou desenvolvedor fullStack a apaixonado por arte e computadores.
+            Bem vindo, sou desenvolvedor fullStack a apaixonado por arte e computadores. <i>Perdão pelo site ainda estamos em reforma</i>.
           </p>
         </Text>
       </SubBox>
