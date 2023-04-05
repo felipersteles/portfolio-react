@@ -17,6 +17,22 @@ export const Blogs = [
     },
     {
         id:3,
+        name:"Java COMPLETO 2023 Programação Orientada a Objetos +Projetos",
+        tags:["java","spring","javaFX"],
+        date:"5 Abril, 2023",
+        imgSrc:"https://img-b.udemycdn.com/course/50x50/1701388_0134.jpg",
+        link:"https://www.udemy.com/certificate/UC-ef35d96c-a639-4457-84fb-fd7eb2f81fc3/"
+    },
+    {
+        id:4,
+        name:"Curso de Linux Mint 19.3",
+        tags:["mint","linux","virtual box"],
+        date:"27 Outubro, 2020",
+        imgSrc:"https://img-b.udemycdn.com/course/50x50/2051027_92f2_3.jpg",
+        link:"https://www.udemy.com/certificate/UC-44bb90b9-7e1d-4d6b-a8c3-8221ba110a7a/"
+    },
+    {
+        id:5,
         name:"Curso Web Moderno Completo com JavaScript 2022 + Projetos",
         tags:["html","css","javascript", "jQuery", "Ajax"],
         date:"1 Junho, 2021",
@@ -24,7 +40,7 @@ export const Blogs = [
         link:"https://www.udemy.com/certificate/UC-7d0312fa-48b4-480b-a60a-07d18888e6e4/"
     },
     {
-        id:4,
+        id:6,
         name:"Linux Ubuntu e Libre Office",
         tags:["linux","ubuntu","Libre Office"],
         date:"26 Outubro, 2020",
