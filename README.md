@@ -4,7 +4,7 @@ Site para auxiliar na apresentação do meu trabalho. Contendo de forma bem resu
 
 Comecei a programar na faculdade quando o professor de algoritimos disse para fazermos um jogo utilizando lua e Love2D como plataforma. Fiz meu primeiro CRUD em C++ na disciplina de linguagem de programação e comecei a aprender sobre Inteligencia Artificial em Python, entrei em um projeto de pesquisa e escrevi meu primeiro artigo cientifico.
 
-Apresentei-o em dezembro de 2022, no mesmo mês em que comecei a estagiar.Inclusive, escrevo esta descrição como sendo um estagiário desenvolvedor na Tarken AG. To aprendendo muito aqui e aproveitar o máximo fato de eu ser estagiário rs.
+Apresentei-o em dezembro de 2022, no mesmo mês em que comecei a estagiar como desenvolvedor full-stack nivel estagiário, porém mais tarde tive que sair devido a falta de disponibilidade devido ao tempo que eu teria que gastar com a faculdade.
 
 # Ver site👇: <br />
 https://felipeteles.herokuapp.com/
